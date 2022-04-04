@@ -1,0 +1,12 @@
+.FilterBy {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-right: solid 1px #000;
+}
+.FilterByContainer {
+    margin-left: -200px;
+    float: left;
+}

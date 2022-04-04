@@ -1,0 +1,20 @@
+.ShowSingleCountry {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Country {
+    width: 100%;
+    text-align: left;
+    padding-left: 100px;
+}
+
+.CountryHeader {
+    display: flex;
+}
+
+.CountryHeader p:first-child {
+    margin-right: 10px;
+}
