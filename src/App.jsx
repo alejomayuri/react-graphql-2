@@ -12,7 +12,7 @@ function App() {
   const handleContintentFilter = (e) => {
     setContinentChecked(e.target)
     setContinent(e.target.value)
-    if(e.target === continentChecked) {
+    if (e.target === continentChecked) {
       e.target.checked = false
       setContinent('')
       setContinentChecked('')
@@ -24,7 +24,7 @@ function App() {
   const handleCurrencyFilter = (e) => {
     setCurrencyChecked(e.target)
     setCurrency(e.target.value)
-    if(e.target === currencyChecked) {
+    if (e.target === currencyChecked) {
       e.target.checked = false
       setCurrency('')
       setCurrencyChecked('')
@@ -32,16 +32,20 @@ function App() {
   }
 
   return (
-    <div className='main'>
-      <CountryContextProvider>
-        <FilterBy
-          handleContintentFilter={handleContintentFilter}
-          handleCurrencyFilter={handleCurrencyFilter}
-        />
-        <CountriesDisplay continent={continent} currency={currency} />
-        <ShowSingleCountry />
-      </CountryContextProvider>
-    </div>
+    <>
+      <h1>Search countries</h1>
+      <div className='main'>
+
+        <CountryContextProvider>
+          <FilterBy
+            handleContintentFilter={handleContintentFilter}
+            handleCurrencyFilter={handleCurrencyFilter}
+          />
+          <CountriesDisplay continent={continent} currency={currency} />
+          <ShowSingleCountry />
+        </CountryContextProvider>
+      </div>
+    </>
   )
 }
 
